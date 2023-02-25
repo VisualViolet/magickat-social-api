@@ -3,6 +3,7 @@ const {User, Thought} = require('../models');
 module.exports = {
     getUser(req, res) {
         User.find()
+            .populate('thoughts')
             .then((users) => res.json(users))
             .catch((err) => res.status(500).json(err))
     },
@@ -41,7 +42,7 @@ module.exports = {
         .then((user) => {
             !user
                 ? res.status(404).json({message: 'User does not exist!'})
-                : res.json(user)
+                : Thought.deleteMany({_id: {$in: user.thoughts}})
         })
         .then(() => res.json({message: 'User deleted!'}))
         .catch((err) => res.status(500).json(err))
