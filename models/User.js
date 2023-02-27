@@ -1,5 +1,6 @@
 const {Schema, model} = require('mongoose');
 
+// Define schema with fields
 const userSchema = new Schema(
     {
         username: {
@@ -12,6 +13,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
+            // Validation using match to regex
             match: [
                 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
                 'Please provide a valid email address'
@@ -38,6 +40,7 @@ const userSchema = new Schema(
     }
 );
 
+// Virtual to return length of friends array as a count variable
 userSchema
     .virtual('friendCount')
     .get(function () {

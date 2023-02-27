@@ -9,6 +9,7 @@ const {
     deleteReaction
 } = require('../../controllers/thoughtController.js');
 
+// Specifying routes for each request
 router.route('/').get(getThought).post(createThought);
 
 router

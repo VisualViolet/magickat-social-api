@@ -1,6 +1,7 @@
 const {Schema, model, Types} = require('mongoose');
 const dayjs = require('dayjs');
 
+// Define schema with fields
 const reactionSchema = new Schema(
     {
         reactionId: {
@@ -19,6 +20,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
+            // format with dayjs
             get: formatDate => dayjs(formatDate).format('MM/DD/YYYY @ H:mm'),
         }
     },
@@ -59,6 +61,7 @@ const thoughtSchema = new Schema(
     }
 );
 
+// Virtual to return length of reactions array as a count variable
 thoughtSchema
     .virtual('reactionCount')
     .get(function () {

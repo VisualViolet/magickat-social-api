@@ -1,3 +1,4 @@
+// Export and require models
 const User = require('./User');
 const Thought = require('./Thought');
 

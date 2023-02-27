@@ -10,6 +10,7 @@ const {
     addFriend
 } = require('../../controllers/userController.js');
 
+// Specifying routes for each request
 router.route('/').get(getUser).post(createUser);
 
 router
