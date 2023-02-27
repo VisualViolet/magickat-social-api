@@ -1,5 +1,11 @@
 # Magickat Social API
 
+![Badge](https://img.shields.io/badge/License-MIT-pink)
+<img height=20 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img height=20 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+<img height=20 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+<img height=20 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+
 ## Description
 **Magickat Social**🔮 is a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list using Express.js and MongoDB (Mongoose). This week in the UW Coding Bootcamp, we learned about MongoDB - a document-oriented database program. MongoDB is capable of storing and querying data like SQL, but has a few key benefits, such as:
 - Flexible document schemas (objects stored in collections)
